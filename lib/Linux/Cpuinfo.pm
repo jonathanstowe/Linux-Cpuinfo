@@ -14,8 +14,8 @@
 #*****************************************************************************
 #*
 #*          $Log: Cpuinfo.pm,v $
-#*          Revision 1.5  2004/03/02 20:28:04  jonathan
-#*          Put back in CVS
+#*          Revision 1.6  2004/06/24 16:36:14  jonathan
+#*          * Fixed typo in the example of num_cpus
 #*
 #*          Revision 1.5  2002/06/10 12:21:58  gellyfish
 #*          Change to failure mode of accessors suggested by Tels
@@ -63,7 +63,7 @@ Linux::Cpuinfo - Object Oriented Interface to /proc/cpuinfo
 
   my $cpuinfo = Linux::Cpuinfo->new();
 
-  $cnt  = $cpuinfo->num_cpus();	 # > 0 for an SMP system
+  $cnt  = $cpuinfo->num_cpus();	 # > 1 for an SMP system
 
 
    foreach my $cpu ( $cpuinfo->cpus() )
@@ -106,7 +106,7 @@ use vars qw(
              $AUTOLOAD
            );
 
-($VERSION) = q$Revision: 1.5 $ =~ /([\d.]+)/;
+($VERSION) = q$Revision: 1.6 $ =~ /([\d.]+)/;
 
 =item cpuinfo
 
