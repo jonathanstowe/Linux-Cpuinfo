@@ -8,8 +8,6 @@ BEGIN
   {
   plan tests => 18;
 
-  use lib 'lib';
-
   use_ok ('Linux::Cpuinfo');
   }
   

@@ -1,7 +1,9 @@
 Changes
-Cpuinfo.pm
+lib/Linux/Cpuinfo.pm
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
+SIGNATURE
 README
 t/cpuinfo.t
 proc/cpuinfo.agenda_mips
