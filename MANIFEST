@@ -6,6 +6,7 @@ MANIFEST.SKIP
 SIGNATURE
 README
 t/cpuinfo.t
+t/0-signature.t
 proc/cpuinfo.agenda_mips
 proc/cpuinfo.alpha
 proc/cpuinfo.ppc
