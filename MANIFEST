@@ -3,9 +3,10 @@ Cpuinfo.pm
 Makefile.PL
 MANIFEST
 README
-test.pl
+t/cpuinfo.t
 proc/cpuinfo.agenda_mips
 proc/cpuinfo.alpha
 proc/cpuinfo.ppc
 proc/cpuinfo.sparc
 proc/cpuinfo.x86_smp
+proc/cpuinfo.Xeon_smp
