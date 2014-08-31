@@ -3,7 +3,6 @@ lib/Linux/Cpuinfo.pm
 Makefile.PL
 MANIFEST
 MANIFEST.SKIP
-SIGNATURE
 README
 t/cpuinfo.t
 t/0-signature.t
