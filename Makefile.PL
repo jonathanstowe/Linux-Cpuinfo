@@ -17,7 +17,6 @@ EONOCPUINFO
 WriteMakefile(
     'NAME'		=> 'Linux::Cpuinfo',
     'VERSION_FROM'	=> 'lib/Linux/Cpuinfo.pm', 
-    'SIGN'          =>  1,
     'PREREQ_PM'		=> {Test::Simple => 0.47 }, 
     'LICENSE'       => 'perl',
     META_MERGE => {

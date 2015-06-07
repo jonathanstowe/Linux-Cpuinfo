@@ -52,3 +52,7 @@ Revision history for Perl extension Linux::Cpuinfo.
 			* Test against all know cpuinfos
 			* use 'our' instead of 'use vars'
 			* Backport fix for dodgy arm kernels from p6 version
+
+1.12  Sun  7 Jun 16:08:13 BST 2015
+
+			* Remove signature check

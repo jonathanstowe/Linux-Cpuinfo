@@ -29,7 +29,7 @@ can_ok ('Linux::Cpuinfo::Cpu', qw/
 
 is ($/, "\n", '$/ default');
 # did we load the right one?
-ok($Linux::Cpuinfo::VERSION == 1.11,'version ok');
+ok($Linux::Cpuinfo::VERSION == 1.12,'version ok');
 
 diag $Linux::Cpuinfo::VERSION;
 
