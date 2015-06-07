@@ -6,3 +6,6 @@
 \bCVS\b
 ^\.git/
 ^MYMETA\.
+^.gitignore$
+.*\.gz$
+
