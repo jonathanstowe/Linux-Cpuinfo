@@ -29,7 +29,9 @@ can_ok ('Linux::Cpuinfo::Cpu', qw/
 
 is ($/, "\n", '$/ default');
 # did we load the right one?
-is ($Linux::Cpuinfo::VERSION > 1.5, 1, 'version ok');
+ok($Linux::Cpuinfo::VERSION == 1.11,'version ok');
+
+diag $Linux::Cpuinfo::VERSION;
 
 my $cpuinfo;
 eval { $cpuinfo = Linux::Cpuinfo->cpuinfo(); };
@@ -53,7 +55,7 @@ print "# Error: $@\n" unless
 
 
 $cpuinfo = undef;
-eval { $cpuinfo = Linux::Cpuinfo->new('proc/cpuinfo.x86_smp'); };
+eval { $cpuinfo = Linux::Cpuinfo->new('t/proc/cpuinfo.x86_smp'); };
 
 print "# Error: $@\n" unless
   is (ref($cpuinfo), 'Linux::Cpuinfo', 'reading alternate file');
