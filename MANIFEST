@@ -8,6 +8,7 @@ t/00-signature.t
 t/01-basic.t
 t/02-cpuinfo.t
 t/03-samples.t
+t/04-armv67-bug.t
 t/proc/cpuinfo.agenda_mips
 t/proc/cpuinfo.alpha
 t/proc/cpuinfo.ppc
