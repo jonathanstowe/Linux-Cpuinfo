@@ -4,7 +4,6 @@ Makefile.PL
 MANIFEST
 MANIFEST.SKIP
 README
-t/00-signature.t
 t/01-basic.t
 t/02-cpuinfo.t
 t/03-samples.t
