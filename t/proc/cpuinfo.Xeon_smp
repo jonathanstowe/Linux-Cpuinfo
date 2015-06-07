@@ -16,8 +16,7 @@ fpu             : yes
 fpu_exception   : yes
 cpuid level     : 2
 wp              : yes
-flags           : fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat
-pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe cid
+flags           : fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe cid
 bogomips        : 6307.84
 
 processor       : 1
@@ -38,6 +37,5 @@ fpu             : yes
 fpu_exception   : yes
 cpuid level     : 2
 wp              : yes
-flags           : fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat
-pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe cid
+flags           : fpu vme de pse tsc msr pae mce cx8 apic mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe cid
 bogomips        : 6373.37
