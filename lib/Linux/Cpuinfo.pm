@@ -135,7 +135,6 @@ sub cpuinfo
             {
                 chomp;
 
-                $self->{_private}->{num_cpus}++;
 
                 my $cpuinfo = {};
 
@@ -161,8 +160,31 @@ sub cpuinfo
                     }
 
                 }
-                my $cpuinfo_cpu = Linux::Cpuinfo::Cpu->new( $cpuinfo, $args );
-                push @{ $self->{_cpuinfo} }, $cpuinfo_cpu;
+                # This is a lot uglier than it needs to be. The perl 6
+                # version is 6 lines.
+                # It seems that single core arm6 or 7 cores highlight
+                # a bug where there is a spurious \n in there
+                # The alert will correctly surmise this breaks for assymetric 
+                # cpus
+                
+                my $ok_to_add = 1;
+                if ( @{ $self->{_cpuinfo} } )
+                {
+                   if (keys %{$self->{_cpuinfo}->[-1]->{_data}} != keys %{$cpuinfo} )
+                   {
+                      foreach my $key ( keys %{$cpuinfo} )
+                      {
+                         $self->{_cpuinfo}->[-1]->{_data}->{$key} = $cpuinfo->{$key};
+                      }
+                      $ok_to_add = 0;
+                   }
+                }
+                if ( $ok_to_add )
+                {
+                   my $cpuinfo_cpu = Linux::Cpuinfo::Cpu->new( $cpuinfo, $args );
+                   $self->{_private}->{num_cpus}++;
+                   push @{ $self->{_cpuinfo} }, $cpuinfo_cpu;
+                }
             }
 
             bless $self, $class;
