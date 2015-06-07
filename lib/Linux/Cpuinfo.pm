@@ -146,7 +146,7 @@ sub cpuinfo
                     $attribute =~ s/\s+/_/;
                     $attribute = lc($attribute);
 
-                    if ( $value =~ /^(no|not available|yes)$/ )
+                    if ( $value && $value =~ /^(no|not available|yes)$/ )
                     {
                         $value = $value eq 'yes' ? 1 : 0;
                     }
