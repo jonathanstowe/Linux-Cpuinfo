@@ -69,18 +69,19 @@ the recommended one.
 
 =cut
 
-use 5.00503;
+use 5.006;
 
 use strict;
+use warnings;
 
 use Carp;
 
-use vars qw(
-  $VERSION
-  $AUTOLOAD
-);
 
-$VERSION = '1.10';
+our $AUTOLOAD;
+
+our  $VERSION = '1.11';
+
+$VERSION = eval $VERSION;
 
 =item cpuinfo
 
@@ -383,7 +384,7 @@ package Linux::Cpuinfo::Cpu;
 use strict;
 use Carp;
 
-use vars qw($AUTOLOAD);
+our $AUTOLOAD;
 
 sub new
 {
