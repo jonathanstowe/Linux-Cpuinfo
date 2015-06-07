@@ -36,13 +36,19 @@ Revision history for Perl extension Linux::Cpuinfo.
 
 1.8	Sat Oct 26 21:10:31 BST 2013
 
-	 * Change email address
+	      * Change email address
          * Add github details for a more sharing decade
 
 1.9	Sun 31 Aug 16:28:09 BST 2014
 	 
-	 * Fix the signature
+	      * Fix the signature
 
 1.10	Sun 31 Aug 17:00:08 BST 2014
 
-	* Skip those stupid generated meta files
+	      * Skip those stupid generated meta files
+
+1.11  Sun  7 Jun 15:16:18 BST 2015
+
+			* Test against all know cpuinfos
+			* use 'our' instead of 'use vars'
+			* Backport fix for dodgy arm kernels from p6 version
